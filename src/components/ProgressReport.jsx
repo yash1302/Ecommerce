@@ -1,13 +1,14 @@
 import React from 'react'
+import Forest from '../assets/forest.png'
 
 const ProgressReport = () => {
   return (
-    <div>
-        <img src="https://images.unsplash.com/photo-1476231682828-37e571bc172f?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
-        <div>
-            <h1>We’re on a Mission To Clean Up the Industry</h1>
-            <p>Read about our progress in our latest Impact Report.</p>
-            <button>LEARN MORE</button>
+    <div className='container mx-auto my-2 mt-[6rem] relative'>
+        <img className='h-[20rem] w-full object-cover' src={Forest} alt="" />
+        <div className='absolute top-[5rem] left-0 right-0 bottom-0 text-white m-auto text-center gap-4 flex flex-col'>
+            <h1 className='text-3xl font-display font-extralight tracking-wide'>We’re on a Mission To Clean Up the Industry</h1>
+            <p className='text-sm font-thin font-display'>Read about our progress in our latest Impact Report.</p>
+            <button className='w-[10rem] py-3 tra text-sm font-thin font-display mx-auto bg-white text-black'>LEARN MORE</button>
         </div>
     </div>
   )

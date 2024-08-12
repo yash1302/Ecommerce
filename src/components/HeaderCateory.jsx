@@ -3,7 +3,7 @@ import React from "react";
 const HeaderCateory = () => {
   return (
     <>
-      <div className="flex items-center justify-center my-2">
+      <div className="flex items-center justify-center my-2 container mx-auto text-sm font-extralight">
         <ul className="li mx-3 my-2">
           <a href="">Holiday Gifting</a>
         </ul>

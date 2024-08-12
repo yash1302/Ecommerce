@@ -4,15 +4,14 @@ import Home from "../assets/Landing.png";
 const Landing = () => {
   return (
     <div
-      className="w-full h-screen flex items-center"
+      className="w-full bg-cover h-screen bg-no-repeat flex items-center"
       style={{ backgroundImage:` URL(${Home})` }}
     >
-      {/* <img src={Home} alt="" className='top-0 left-0 w-full h-screen object-cover'/> */}
-      <div className=' text-white flex flex-col items-center justify-center gap-3 ml-[12rem] mt-[9rem]' >
-            <h1 className='text-4xl text-center tracking-wider'>Your Cozy Era</h1>
-            <p className='w-[20rem] text-center font-thin tracking-wide text-xl'>Get peak comfy-chic <br />
+      <div className=' text-white flex flex-col items-center justify-center gap-3 ml-[20rem] mt-[5rem] font-display' >
+            <h1 className='text-5xl text-center tracking-wider font-thin'>Your Cozy Era</h1>
+            <p className='w-[20rem] text-center font-thin tracking-wider text-2xl leading-relaxed'>Get peak comfy-chic <br />
             with new winter essentials.</p>
-            <button className="py-2 px-[5rem] text-black bg-white">SHOP NOW</button>
+            <button className="py-2 px-[6rem] text-black bg-white font-thin">SHOP NOW</button>
         </div>
     </div>
   );
