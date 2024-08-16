@@ -1,4 +1,5 @@
 import "./App.css";
+import EverlaneFavourites from "./components/EverlaneFavourites";
 import Heading from "./components/Heading";
 import Landing from "./components/Landing";
 import OutfitSection from "./components/OutfitSection";
@@ -14,6 +15,7 @@ function App() {
       <ShopByCategory/>
       <OutfitSection/>
       <ProgressReport/>
+      <EverlaneFavourites/>
       {/* hello */}
     </>
   );
