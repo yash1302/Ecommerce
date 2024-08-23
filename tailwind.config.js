@@ -5,6 +5,8 @@ export default {
     extend: {},
     fontFamily: {
       display: ["display", "sans-serif"],
+      lato: ["Lato", "sans-serif"],
+      openSans: ["Open Sans", "sans-serif"],
     },
   },
   plugins: [],
