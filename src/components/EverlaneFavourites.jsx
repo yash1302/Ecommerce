@@ -57,14 +57,12 @@ const EverlaneFavourites = () => {
     );
   };
 
-  console.log(currentIndex)
-
   const handleNext = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
   };
 
   return (
-    <div className="mt-[6rem] mx-auto relative flex flex-col items-center justify-center">
+    <div className=" mx-auto relative flex flex-col items-center justify-center h-screen">
       <h1 className="text-2xl font-display font-light  tracking-wide mb-[1rem]">
         Everlane Favorites
       </h1>
