@@ -62,25 +62,24 @@ const EverlaneFavourites = () => {
   };
 
   return (
-    <div className=" mx-auto relative flex flex-col items-center justify-center h-screen">
-      <h1 className="text-2xl font-display font-light  tracking-wide mb-[1rem]">
+    <div className=" mx-auto relative flex flex-col items-center  justify-center h-screen">
+      <h1 className="text-4xl font-display font-light  tracking-wide mb-[1rem]">
         Everlane Favorites
       </h1>
       <p className="mb-[2rem] text-l font-normal font-openSans tracking-wide">
         Beautifully Functional. Purposefully Designed. Consciously Crafted.
       </p>
       <div className=" flex items-center justify-center gap-2">
-        <button onClick={handlePrev}>
+        <button className="mb-[5rem] mr-[2rem]" onClick={handlePrev}>
           <FaLessThan />
         </button>
-        <div className="flex gap-2 items-center justify-center">
+        <div className="flex gap-2 items-center justify-center container">
           {displayImages().map((card, index) => (
-            // console.log(card)
             <EverlaneFavouritesImages key={index} img={card.img} index={index} price={card.price} brand={card.brand} type = {card.type}  />
           ))}
         </div>
 
-        <button onClick={handleNext}>
+        <button className="mb-[5rem] ml-[2rem]" onClick={handleNext}>
           <FaGreaterThan />
         </button>
       </div>

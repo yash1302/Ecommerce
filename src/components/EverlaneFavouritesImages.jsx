@@ -3,9 +3,9 @@ import React from "react";
 const EverlaneFavouritesImages = (props) => {
   const { img, index, type, brand, price } = props;
   return (
-    <div className="flex flex-col w-[19.5rem] h-[26rem] " key={index}>
+    <div className="flex flex-col w-[23.7rem] " key={index}>
       <img
-        className="w-full h-[22rem] object-cover"
+        className="w-full h-[35rem] object-cover"
         src={img}
         alt="Card"
       />

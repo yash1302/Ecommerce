@@ -48,7 +48,7 @@ being stiff.”`,
 
   return (
     <div className="h-screen">
-      <div className=" container mx-auto flex items-center justify-center">
+      <div className="h-screen container mx-auto flex items-center justify-center">
         <button className="mb-[2rem]" onClick={handlePrev}>
           <FaLessThan />
         </button>
