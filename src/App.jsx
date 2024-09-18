@@ -14,10 +14,10 @@ function App() {
   return (
     <>
       <Heading/>
-      {/* <Landing/>
+       <Landing/>
       <ShopByCategory/>
       <OutfitSection/>
-      <ProgressReport/>
+      {/*<ProgressReport/>
       <EverlaneFavourites/>
       <Review/>
       <Article/>

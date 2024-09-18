@@ -1,6 +1,4 @@
 import React from "react";
-import { HiArrowRight } from "react-icons/hi2";
-import { FaFlagUsa } from "react-icons/fa";
 
 const Advertisement = () => {
   return (

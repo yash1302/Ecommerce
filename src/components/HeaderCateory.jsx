@@ -16,21 +16,6 @@ const HeaderCateory = () => {
         <ul className="li my-2 hover:underline underline-offset-4">
           <a href="">Everworld Stories</a>
         </ul>
-        {/* <ul className="li mx-3 my-2">
-          <a href="">Pants & Jeans</a>
-        </ul>
-        <ul className="li mx-3 my-2">
-          <a href="">Tops & Sweaters</a>
-        </ul>
-        <ul className="li mx-3 my-2">
-          <a href="">Outerwear</a>
-        </ul>
-        <ul className="li mx-3">
-          <a href="">Shoes & Bags</a>
-        </ul>
-        <ul className="li mx-3 text-red-600">
-          <a href="">Sale</a>
-        </ul> */}
       </div>
       <hr className="bg-gray-200 "/>
     </div>
