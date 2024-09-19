@@ -1,6 +1,20 @@
 import React, { useEffect, useState } from "react";
 import EverlaneFavouritesImages from "./EverlaneFavouritesImages";
 import { FaLessThan, FaGreaterThan } from "react-icons/fa6";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
+import {
+  FreeMode,
+  Pagination,
+  Mousewheel,
+  Keyboard,
+  Navigation,
+} from "swiper/modules";
 
 const EverlaneFavourites = () => {
   const [currentIndex, setCurrentIndex] = useState(2);
@@ -62,27 +76,86 @@ const EverlaneFavourites = () => {
   };
 
   return (
-    <div className=" mx-auto relative flex flex-col items-center  justify-center h-screen">
-      <h1 className="text-4xl font-display font-light  tracking-wide mb-[1rem]">
+    <div className="mt-6 md:mt-[4rem] lg:mt-[6rem] relative h-screen container mx-auto">
+      <h1 className="text-center text-xl font-display font-light  tracking-wide mb-[1rem] uppercase">
         Everlane Favorites
       </h1>
-      <p className="mb-[2rem] text-l font-normal font-openSans tracking-wide">
+      <p className="hidden md:block mb-[2rem] text-l font-normal font-openSans tracking-wide">
         Beautifully Functional. Purposefully Designed. Consciously Crafted.
       </p>
-      <div className=" flex items-center justify-center gap-2">
-        <button className="mb-[5rem] mr-[2rem]" onClick={handlePrev}>
-          <FaLessThan />
-        </button>
-        <div className="flex gap-2 items-center justify-center container">
-          {displayImages().map((card, index) => (
-            <EverlaneFavouritesImages key={index} img={card.img} index={index} price={card.price} brand={card.brand} type = {card.type}  />
+      <div className="md:hidden">
+        <Swiper
+          slidesPerView={3}
+          spaceBetween={20}
+          cssMode={true}
+          navigation={true}
+          mousewheel={true}
+          keyboard={true}
+          modules={[Navigation, Pagination, Mousewheel, Keyboard, FreeMode]}
+          className="mySwiper ml-4"
+        >
+          {images.map((card, index) => (
+            <SwiperSlide key={index}>
+              <EverlaneFavouritesImages
+                key={index}
+                img={card.img}
+                index={index}
+                price={card.price}
+                brand={card.brand}
+                type={card.type}
+              />
+            </SwiperSlide>
           ))}
-        </div>
-
-        <button className="mb-[5rem] ml-[2rem]" onClick={handleNext}>
-          <FaGreaterThan />
-        </button>
+        </Swiper>
       </div>
+      <div className="hidden md:block lg:hidden">
+        <Swiper
+          slidesPerView={3}
+          spaceBetween={20}
+          cssMode={true}
+          navigation={true}
+          mousewheel={true}
+          keyboard={true}
+          modules={[Navigation, Pagination, Mousewheel, Keyboard, FreeMode]}
+          className="mySwiper ml-4"
+        >
+          {images.map((card, index) => (
+            <SwiperSlide key={index}>
+              <EverlaneFavouritesImages
+                key={index}
+                img={card.img}
+                index={index}
+                price={card.price}
+                brand={card.brand}
+                type={card.type}
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+      {/* <div className="hidden md:block">
+        <div className=" flex items-center justify-center gap-2">
+          <button className="mb-[5rem] mr-[2rem]" onClick={handlePrev}>
+            <FaLessThan />
+          </button>
+          <div className="flex gap-2 items-center justify-center container">
+            {displayImages().map((card, index) => (
+              <EverlaneFavouritesImages
+                key={index}
+                img={card.img}
+                index={index}
+                price={card.price}
+                brand={card.brand}
+                type={card.type}
+              />
+            ))}
+          </div>
+
+          <button className="mb-[5rem] ml-[2rem]" onClick={handleNext}>
+            <FaGreaterThan />
+          </button>
+        </div>
+      </div> */}
     </div>
   );
 };

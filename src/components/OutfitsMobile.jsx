@@ -8,7 +8,7 @@ const OutfitsMobile = (props) => {
         src={props.imageLink}
         alt=""
       />
-      <div className="text-center absolute top-[17rem] left-[9rem] text-white flex flex-col justify-center items-center">
+      <div className="text-center absolute top-[17rem] left-1/3 text-white flex flex-col justify-center items-center">
         <h1 className="font-display font-thin tracking-widest text-xl text-center">
           {props.headingName}
         </h1>

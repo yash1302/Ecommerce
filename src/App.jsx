@@ -18,8 +18,8 @@ function App() {
       <ShopByCategory/>
       <OutfitSection/>
       <ProgressReport/>
-      {/*<EverlaneFavourites/>
-      <Review/>
+      <EverlaneFavourites/>
+      {/*<Review/>
       <Article/>
       <PhotoGallery/> */}
     </>
