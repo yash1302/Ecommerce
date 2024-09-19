@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import EverlaneFavouritesImages from "./EverlaneFavouritesImages";
-import { FaLessThan, FaGreaterThan } from "react-icons/fa6";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
@@ -17,7 +16,6 @@ import {
 } from "swiper/modules";
 
 const EverlaneFavourites = () => {
-  const [currentIndex, setCurrentIndex] = useState(2);
   const images = [
     {
       img: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGNsb3RoaW5nfGVufDB8fDB8fHww",
@@ -56,31 +54,12 @@ const EverlaneFavourites = () => {
       brand: "Levi",
     },
   ];
-
-  const displayImages = () => {
-    const first = (currentIndex - 2 + images.length) % images.length;
-    const second = (currentIndex - 1 + images.length) % images.length;
-    const next = (currentIndex + 1) % images.length;
-
-    return [images[first], images[second], images[currentIndex], images[next]];
-  };
-
-  const handlePrev = () => {
-    setCurrentIndex(
-      (prevIndex) => (prevIndex - 1 + images.length) % images.length
-    );
-  };
-
-  const handleNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-  };
-
   return (
-    <div className="mt-6 md:mt-[4rem] lg:mt-[6rem] relative h-screen container mx-auto">
+    <div className="mt-6 md:mt-[4rem] lg:mt-[6rem] relative container mx-auto">
       <h1 className="text-center text-xl font-display font-light  tracking-wide mb-[1rem] uppercase">
         Everlane Favorites
       </h1>
-      <p className="hidden md:block mb-[2rem] text-l font-normal font-openSans tracking-wide">
+      <p className="text-center hidden md:block mb-[2rem] text-l font-normal font-openSans tracking-wide">
         Beautifully Functional. Purposefully Designed. Consciously Crafted.
       </p>
       <div className="md:hidden">
@@ -133,29 +112,6 @@ const EverlaneFavourites = () => {
           ))}
         </Swiper>
       </div>
-      {/* <div className="hidden md:block">
-        <div className=" flex items-center justify-center gap-2">
-          <button className="mb-[5rem] mr-[2rem]" onClick={handlePrev}>
-            <FaLessThan />
-          </button>
-          <div className="flex gap-2 items-center justify-center container">
-            {displayImages().map((card, index) => (
-              <EverlaneFavouritesImages
-                key={index}
-                img={card.img}
-                index={index}
-                price={card.price}
-                brand={card.brand}
-                type={card.type}
-              />
-            ))}
-          </div>
-
-          <button className="mb-[5rem] ml-[2rem]" onClick={handleNext}>
-            <FaGreaterThan />
-          </button>
-        </div>
-      </div> */}
     </div>
   );
 };

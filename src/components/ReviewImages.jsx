@@ -19,7 +19,7 @@ const ReviewImages = (props) => {
         </p>
         <div className="flex flex-col gap-2">
           <p className="flex mb-2">{myExample()}</p>
-          <p className="text-3xl font-display font-extralight mb-4 tracking-wide w-[30rem]">
+          <p className="text-xl font-display font-extralight mb-4 tracking-wide w-[15rem] lg:w-[20rem] lg:text-3xl">
             {review}
           </p>
         </div>
@@ -32,7 +32,7 @@ const ReviewImages = (props) => {
       </div>
       <div>
         <img
-          className="h-[90vh] w-[35rem] object-cover rounded-md"
+          className="h-[20rem] lg:h-[90vh] w-[35rem] object-cover rounded-md"
           src={img}
           alt=""
         />

@@ -19,9 +19,9 @@ function App() {
       <OutfitSection/>
       <ProgressReport/>
       <EverlaneFavourites/>
-      {/*<Review/>
+      <Review/>
       <Article/>
-      <PhotoGallery/> */}
+      {/*<PhotoGallery/> */}
     </>
   );
 }

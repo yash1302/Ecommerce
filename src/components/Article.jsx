@@ -1,5 +1,20 @@
 import React from "react";
 import ArticleImage from "./ArticleImage";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
+import {
+  FreeMode,
+  Pagination,
+  Mousewheel,
+  Keyboard,
+  Navigation,
+} from "swiper/modules";
+import ArticleImageMobile from "./ArticleImageMobile";
 
 const Article = () => {
   const articles = [
@@ -17,10 +32,40 @@ const Article = () => {
     },
   ];
   return (
-    <div className="container mx-auto">
-      <div className=" container mx-auto flex gap-6 items-center h-screen justify-center">
-        <ArticleImage obj={articles[0]} />
-        <ArticleImage obj={articles[1]} />
+    <div className="container mx-auto mt-6">
+      <div className="md:hidden">
+        <Swiper
+          cssMode={true}
+          navigation={true}
+          mousewheel={true}
+          keyboard={true}
+          modules={[Navigation, Pagination, Mousewheel, Keyboard, FreeMode]}
+          className="mySwiper mx-4"
+        >
+          {articles.map((card, index) => (
+            <SwiperSlide key={index}>
+              <ArticleImageMobile obj={card} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+      <div className="hidden md:block">
+        <Swiper
+          slidesPerView={2}
+          spaceBetween={20}
+          cssMode={true}
+          navigation={true}
+          mousewheel={true}
+          keyboard={true}
+          modules={[Navigation, Pagination, Mousewheel, Keyboard, FreeMode]}
+          className="mySwiper mx-4"
+        >
+          {articles.map((card, index) => (
+            <SwiperSlide key={index}>
+              <ArticleImage obj={card} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
       <hr class="container mx-auto h-px bg-gray-800 border-0 dark:bg-gray-700" />
     </div>

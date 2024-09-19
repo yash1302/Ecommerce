@@ -1,24 +1,27 @@
 import React, { useState } from "react";
 import ReviewImages from "./ReviewImages";
 import { FaLessThan, FaGreaterThan } from "react-icons/fa6";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
+import {
+  FreeMode,
+  Pagination,
+  Mousewheel,
+  Keyboard,
+  Navigation,
+} from "swiper/modules";
+import ReviewImagesMobile from "./ReviewImagesMobile";
 
 const Review = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const handleNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % reviews.length);
-  };
-
-  const handlePrev = () => {
-    setCurrentIndex(
-      (prevIndex) => (prevIndex - 1 + reviews.length) % reviews.length
-    );
-  };
   const reviews = [
     {
       rating: "5",
-      review: `“Love this shirt! Fits perfectly and the fabric is thick without 
-being stiff.”`,
+      review: `“Love this shirt! Fits perfectly and the fabric is thick without being stiff.”`,
       brand: "-- JonSnSF",
       type: "The Heavyweight Overshirt",
       img: "https://images.unsplash.com/photo-1697425603497-878be43708bb?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzh8fGNsb3RoaW5nJTIwYnJhbmR8ZW58MHx8MHx8fDA%3D",
@@ -47,19 +50,45 @@ being stiff.”`,
   ];
 
   return (
-    <div className="h-screen">
-      <div className="h-screen container mx-auto flex items-center justify-center">
-        <button className="mb-[2rem]" onClick={handlePrev}>
-          <FaLessThan />
-        </button>
-
-        <ReviewImages obj={reviews[currentIndex]} />
-
-        <button className="mb-[2rem]" onClick={handleNext}>
-          <FaGreaterThan />
-        </button>
+    <div className="lg:h-screen h-full mt-6 md:mt-[4rem] lg:mt-[6rem] container mx-auto">
+      <div className="md:hidden">
+        <Swiper
+          cssMode={true}
+          navigation={true}
+          mousewheel={true}
+          keyboard={true}
+          modules={[Navigation, Pagination, Mousewheel, Keyboard, FreeMode]}
+          className="mySwiper ml-4"
+        >
+          {reviews.map((card, index) => (
+            <SwiperSlide key={index}>
+              <ReviewImagesMobile obj={card} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
-      <hr class="container mx-auto h-px bg-gray-800 border-0 dark:bg-gray-700" />
+      <div className="hidden md:block">
+
+        <Swiper
+          cssMode={true}
+          pagination={{
+            dynamicBullets: true,
+          }}
+          spaceBetween={10}
+          navigation={true}
+          mousewheel={true}
+          keyboard={true}
+          modules={[Navigation, Pagination, Mousewheel, Keyboard, FreeMode]}
+          className="mySwiper mx-4"
+        >
+          {reviews.map((card, index) => (
+            <SwiperSlide key={index}>
+              <ReviewImages obj={card} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+      <hr class="w-[10rem] md:w-max container mx-auto h-px bg-gray-800 border-0 dark:bg-gray-700 mt-[2rem] md:mt-0" />
     </div>
   );
 };
