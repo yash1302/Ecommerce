@@ -39,8 +39,8 @@ const OutfitSection = () => {
   ];
 
   return (
-    <div className="flex flex-col justify-center mt-[6rem] container m-auto">
-      <div className="flex flex-col md:hidden">
+    <div className="flex flex-col justify-center mt-6 md:mt-[4rem] lg:mt-[6rem] container mx-auto">
+      <div className="md:hidden">
         <Swiper
           cssMode={true}
           navigation={true}
@@ -51,23 +51,63 @@ const OutfitSection = () => {
         >
           {outfits.map((outfit, index) => (
             <SwiperSlide key={index}>
-              {index}
+              <OutfitsMobile
+                key={index}
+                imageLink={outfit.imageLink}
+                headingName={outfit.headingName}
+                btnName={outfit.btnName}
+              />
             </SwiperSlide>
           ))}
         </Swiper>
       </div>
-      {/* <div className="hidden md:block">
-        <div className="flex gap-4">
+      <div className="hidden md:block lg:hidden">
+        <Swiper
+          slidesPerView={2}
+          spaceBetween={20}
+          cssMode={true}
+          navigation={true}
+          mousewheel={true}
+          keyboard={true}
+          modules={[Navigation, Pagination, Mousewheel, Keyboard, FreeMode]}
+          className="mySwiper"
+        >
           {outfits.map((outfit, index) => (
-            <Outfits
-              key={index}
-              imageLink={outfit.imageLink}
-              headingName={outfit.headingName}
-              btnName={outfit.btnName}
-            />
+            <SwiperSlide key={index}>
+              <Outfits
+                key={index}
+                imageLink={outfit.imageLink}
+                headingName={outfit.headingName}
+                btnName={outfit.btnName}
+              />
+            </SwiperSlide>
           ))}
-        </div>
-      </div> */}
+        </Swiper>
+      </div>
+      <div className="hidden lg:block">
+        <Swiper
+          slidesPerView={3}
+          spaceBetween={20}
+          cssMode={true}
+          navigation={true}
+          mousewheel={true}
+          keyboard={true}
+          modules={[Navigation, Pagination, Mousewheel, Keyboard, FreeMode]}
+          className="mySwiper"
+        >
+          {outfits.map((outfit, index) => (
+            <SwiperSlide key={index}>
+              <Outfits
+                key={index}
+                imageLink={outfit.imageLink}
+                headingName={outfit.headingName}
+                btnName={outfit.btnName}
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+      
     </div>
   );
 };

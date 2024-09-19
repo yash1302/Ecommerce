@@ -46,7 +46,7 @@ const ShopByCategory = () => {
 
   return (
     <div className="container mx-auto">
-      <h1 className="text-lg md:text-2xl md:mt-[6rem] mt-6 font-thin font-display text-center uppercase">Shop by Category</h1>
+      <h1 className="text-lg md:text-2xl md:mt-[4rem] lg:mt-[6rem] mt-6 font-thin font-display text-center uppercase">Shop by Category</h1>
       <div className="flex gap-2 mt-4 md:hidden">
         <Swiper
           slidesPerView={4}
