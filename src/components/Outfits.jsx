@@ -8,7 +8,7 @@ const Outfits = (props) => {
         src={props.imageLink}
         alt=""
       />
-      <div className="absolute top-[20rem] left-[7rem] text-white flex flex-col justify-center items-center">
+      <div className="absolute top-[20rem] left-[7rem] lg:left-[5rem] text-white flex flex-col justify-center items-center">
         <h1 className="font-display font-thin tracking-widest text-xl">
           {props.headingName}
         </h1>

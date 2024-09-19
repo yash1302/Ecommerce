@@ -17,12 +17,11 @@ function App() {
        <Landing/>
       <ShopByCategory/>
       <OutfitSection/>
-      {/*<ProgressReport/>
-      <EverlaneFavourites/>
+      <ProgressReport/>
+      {/*<EverlaneFavourites/>
       <Review/>
       <Article/>
       <PhotoGallery/> */}
-      {/* hello */}
     </>
   );
 }
