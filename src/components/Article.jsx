@@ -67,7 +67,7 @@ const Article = () => {
           ))}
         </Swiper>
       </div>
-      <hr class="container hidden md:block mx-auto h-px bg-gray-800 border-0 dark:bg-gray-700" />
+      {/* <hr class=" mt-4 container hidden md:block mx-auto h-px bg-gray-800 border-0 dark:bg-gray-700" /> */}
     </div>
   );
 };

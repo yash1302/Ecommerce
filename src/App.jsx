@@ -1,5 +1,6 @@
 import "./App.css";
 import Article from "./components/Article";
+import Benefits from "./components/Benefits";
 import EverlaneFavourites from "./components/EverlaneFavourites";
 import Heading from "./components/Heading";
 import Landing from "./components/Landing";
@@ -21,6 +22,7 @@ function App() {
       <Review />
       <Article />
       <PhotoGallery />
+      <Benefits/>
     </>
   );
 }

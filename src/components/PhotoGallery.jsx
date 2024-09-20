@@ -69,7 +69,7 @@ const PhotoGallery = () => {
           <p className="text-xl lg:text-3xl font-light font-display mb-4 tracking-wide">
             Everlane On You
           </p>
-          <p className="text-center font-openSans font-thin tracking-wider mb-2 w-[20rem]">
+          <p className="text-center font-openSans font-thin tracking-wider mb-2 w-[20rem] md:w-full">
             Share your latest look with #EverlaneOnYou for a chance to be
             featured.
           </p>
@@ -128,7 +128,7 @@ const PhotoGallery = () => {
           </Swiper>
         </div>
       </div>
-      <hr class="hidden md:block container mx-auto h-px bg-gray-800 border-0 dark:bg-gray-700" />
+      {/* <hr class="hidden md:block container mx-auto h-px bg-gray-800 border-0 dark:bg-gray-700" /> */}
     </div>
   );
 };
