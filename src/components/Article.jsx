@@ -40,7 +40,7 @@ const Article = () => {
           mousewheel={true}
           keyboard={true}
           modules={[Navigation, Pagination, Mousewheel, Keyboard, FreeMode]}
-          className="mySwiper mx-4"
+          className="mySwiper"
         >
           {articles.map((card, index) => (
             <SwiperSlide key={index}>
@@ -67,7 +67,7 @@ const Article = () => {
           ))}
         </Swiper>
       </div>
-      <hr class="container mx-auto h-px bg-gray-800 border-0 dark:bg-gray-700" />
+      <hr class="container hidden md:block mx-auto h-px bg-gray-800 border-0 dark:bg-gray-700" />
     </div>
   );
 };

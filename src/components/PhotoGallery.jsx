@@ -1,6 +1,23 @@
 import React, { useState } from "react";
 import Photos from "./Photos";
 import { FaLessThan, FaGreaterThan } from "react-icons/fa6";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/effect-cards";
+import "swiper/css/free-mode";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
+import {
+  FreeMode,
+  Pagination,
+  Mousewheel,
+  Keyboard,
+  Navigation,
+  EffectCards,
+} from "swiper/modules";
 
 const PhotoGallery = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -47,31 +64,71 @@ const PhotoGallery = () => {
 
   return (
     <div>
-      <div className="mt-[6rem] container mx-auto flex flex-col items-center justify-center">
-        <p className="text-3xl font-light font-display mb-4 tracking-wide">
-          Everlane On You
-        </p>
-        <p className="font-openSans font-thin tracking-wider mb-2">
-          Share your latest look with #EverlaneOnYou for a chance to be
-          featured.
-        </p>
-        <p className="underline underline-offset-2 font-openSans font-thin tracking-wider mb-4">
-          Add Your Photo
-        </p>
-        <div className="container mx-auto flex items-center justify-center gap-4">
-          <button onClick={handlePrev}>
-            <FaLessThan />
-          </button>
-          {displayPhotos().map((photo, index) => (
-            <Photos key={index} src={photo} />
-          ))}
-
-          <button onClick={handleNext}>
-            <FaGreaterThan />
+      <div className="mt-6 md:mt-[4rem] lg:mt-[6rem] container mx-auto ">
+        <div className="flex flex-col items-center justify-center">
+          <p className="text-xl lg:text-3xl font-light font-display mb-4 tracking-wide">
+            Everlane On You
+          </p>
+          <p className="text-center font-openSans font-thin tracking-wider mb-2 w-[20rem]">
+            Share your latest look with #EverlaneOnYou for a chance to be
+            featured.
+          </p>
+          <button className="text-sm btn btn-primary border-solid-gray-50  border-2 p-2 rounded-full hover:bg-black hover:text-white font-openSans font-thin tracking-wider mb-4">
+            Add Your Photo
           </button>
         </div>
+        <div className="md:hidden">
+          <Swiper
+            effect={"cards"}
+            grabCursor={true}
+            modules={[EffectCards]}
+            className="mySwiper w-2/3 mx-auto"
+          >
+            {photos.map((photo, index) => (
+              <SwiperSlide>
+                <Photos key={index} src={photo} />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+        <div className="hidden md:block lg:hidden">
+          <Swiper
+            slidesPerView={3}
+            spaceBetween={20}
+            cssMode={true}
+            navigation={true}
+            mousewheel={true}
+            keyboard={true}
+            modules={[Navigation, Pagination, Mousewheel, Keyboard, FreeMode]}
+            className="mySwiper mx-4"
+          >
+            {photos.map((photo, index) => (
+              <SwiperSlide key={index}>
+                <Photos key={index} src={photo} />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+        <div className="hidden lg:block">
+          <Swiper
+            slidesPerView={4}
+            spaceBetween={20}
+            cssMode={true}
+            navigation={true}
+            mousewheel={true}
+            keyboard={true}
+            modules={[Navigation, Pagination, Mousewheel, Keyboard, FreeMode]}
+            className="mySwiper mx-4"
+          >
+            {photos.map((photo, index) => (
+              <SwiperSlide key={index}>
+                <Photos key={index} src={photo} />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
       </div>
-      <hr class="container mx-auto h-px bg-gray-800 border-0 dark:bg-gray-700" />
+      <hr class="hidden md:block container mx-auto h-px bg-gray-800 border-0 dark:bg-gray-700" />
     </div>
   );
 };

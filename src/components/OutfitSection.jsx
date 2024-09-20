@@ -70,7 +70,7 @@ const OutfitSection = () => {
           mousewheel={true}
           keyboard={true}
           modules={[Navigation, Pagination, Mousewheel, Keyboard, FreeMode]}
-          className="mySwiper"
+          className="mySwiper mx-4"
         >
           {outfits.map((outfit, index) => (
             <SwiperSlide key={index}>
@@ -93,7 +93,7 @@ const OutfitSection = () => {
           mousewheel={true}
           keyboard={true}
           modules={[Navigation, Pagination, Mousewheel, Keyboard, FreeMode]}
-          className="mySwiper"
+          className="mySwiper mx-4"
         >
           {outfits.map((outfit, index) => (
             <SwiperSlide key={index}>

@@ -71,7 +71,7 @@ const EverlaneFavourites = () => {
           mousewheel={true}
           keyboard={true}
           modules={[Navigation, Pagination, Mousewheel, Keyboard, FreeMode]}
-          className="mySwiper ml-4"
+          className="mySwiper"
         >
           {images.map((card, index) => (
             <SwiperSlide key={index}>
@@ -96,7 +96,7 @@ const EverlaneFavourites = () => {
           mousewheel={true}
           keyboard={true}
           modules={[Navigation, Pagination, Mousewheel, Keyboard, FreeMode]}
-          className="mySwiper ml-4"
+          className="mySwiper mx-4"
         >
           {images.map((card, index) => (
             <SwiperSlide key={index}>

@@ -10,18 +10,17 @@ import Review from "./components/Review";
 import ShopByCategory from "./components/ShopByCategory";
 
 function App() {
-
   return (
     <>
-      <Heading/>
-       <Landing/>
-      <ShopByCategory/>
-      <OutfitSection/>
-      <ProgressReport/>
-      <EverlaneFavourites/>
-      <Review/>
-      <Article/>
-      {/*<PhotoGallery/> */}
+      <Heading />
+      <Landing />
+      <ShopByCategory />
+       <OutfitSection />
+      <ProgressReport />
+      <EverlaneFavourites />
+      <Review />
+      <Article />
+      <PhotoGallery />
     </>
   );
 }

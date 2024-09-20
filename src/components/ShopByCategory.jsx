@@ -47,7 +47,7 @@ const ShopByCategory = () => {
   return (
     <div className="container mx-auto">
       <h1 className="text-lg md:text-2xl md:mt-[4rem] lg:mt-[6rem] mt-6 font-thin font-display text-center uppercase">Shop by Category</h1>
-      <div className="flex gap-2 mt-4 md:hidden">
+      <div className="mt-4 md:hidden">
         <Swiper
           slidesPerView={4}
           spaceBetween={0}
@@ -78,7 +78,7 @@ const ShopByCategory = () => {
               mousewheel={true}
               keyboard={true}
               modules={[Navigation, Pagination, Mousewheel, Keyboard, FreeMode]}
-              className="mySwiper"
+              className="mySwiper mx-4"
             >
               {categoryImages.map((image, index) => (
                 <SwiperSlide>

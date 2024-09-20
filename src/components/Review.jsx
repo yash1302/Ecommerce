@@ -51,14 +51,15 @@ const Review = () => {
 
   return (
     <div className="lg:h-screen h-full mt-6 md:mt-[4rem] lg:mt-[6rem] container mx-auto">
-      <div className="md:hidden">
+      <p className="text-center font-medium text-xl">Testimonial</p>
+      <div className="md:hidden mt-4">
         <Swiper
           cssMode={true}
           navigation={true}
           mousewheel={true}
           keyboard={true}
           modules={[Navigation, Pagination, Mousewheel, Keyboard, FreeMode]}
-          className="mySwiper ml-4"
+          className="mySwiper"
         >
           {reviews.map((card, index) => (
             <SwiperSlide key={index}>
