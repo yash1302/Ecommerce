@@ -4,7 +4,7 @@ const Outfits = (props) => {
   return (
     <div className="relative">
       <img
-        className=" w-screen h-[40rem] object-cover brightness-50 rounded-sm"
+        className="w-screen h-[40rem] object-cover brightness-50 rounded-sm"
         src={props.imageLink}
         alt=""
       />
@@ -12,7 +12,7 @@ const Outfits = (props) => {
         <h1 className="font-display font-thin tracking-widest text-xl">
           {props.headingName}
         </h1>
-        <button className="bg-white text-black px-3 py-2 text-xs mt-4 font-display font-thin tracking-wider">
+        <button className="bg-white text-black px-3 py-2 text-xs font-display font-thin tracking-wider">
           {props.btnName}
         </button>
       </div>

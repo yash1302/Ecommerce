@@ -5,8 +5,8 @@ const Landing = () => {
   const [time, setTime] = useState(5000);
 
   const images = [
-    "https://images.unsplash.com/photo-1726124492901-98e92ae6bd12?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Y2xvdGhpbmd8ZW58MHwwfDJ8fHwy",
-    "https://images.unsplash.com/photo-1649635840101-eba02007e0ac?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTN8fGNsb3RoaW5nJTIwYnJhbmQlMjBsYW5kaW5nJTIwcGFnZSUyMDE0NDAlMjBweHxlbnwwfDB8MHx8fDA%3D",
+    "https://images.unsplash.com/uploads/1413387158190559d80f7/6108b580?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8NHx8fGVufDB8fHx8fA%3D%3D",
+    "https://images.unsplash.com/photo-1564584217132-2271feaeb3c5?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Y2xvdGhpbmd8ZW58MHwwfDB8fHwy",
     "https://images.unsplash.com/photo-1649635840101-eba02007e0ac?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTN8fGNsb3RoaW5nJTIwYnJhbmQlMjBsYW5kaW5nJTIwcGFnZSUyMDE0NDAlMjBweHxlbnwwfDB8MHx8fDA%3D",
     "https://images.unsplash.com/photo-1649635840101-eba02007e0ac?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTN8fGNsb3RoaW5nJTIwYnJhbmQlMjBsYW5kaW5nJTIwcGFnZSUyMDE0NDAlMjBweHxlbnwwfDB8MHx8fDA%3D",
     "https://images.unsplash.com/photo-1649635840101-eba02007e0ac?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTN8fGNsb3RoaW5nJTIwYnJhbmQlMjBsYW5kaW5nJTIwcGFnZSUyMDE0NDAlMjBweHxlbnwwfDB8MHx8fDA%3D",
@@ -33,46 +33,34 @@ const Landing = () => {
   };
 
   return (
-    <div className=" mx-auto">
+    <div className="mx-auto relative">
       <img
         className="h-[33rem] w-screen object-cover relative md:hidden"
         src={phoneImages[img]}
         alt=""
       />
-      <img
-        className="hidden md:block lg:h-screen h-[38rem] w-screen object-cover relative"
-        src={images[img]}
-        alt=""
-      />
+      <div className="hidden md:block h-[80vh] w-[90vw] mx-auto">
+        <img
+          className="w-full h-full object-contain"
+          src={images[img]}
+          alt=""
+        />
+      </div>
 
-
-      <div className="absolute bottom-[13rem] left-1/2 lg:bottom-[-5rem]  translate-x-[-50%] md:bottom-[8rem]">
+      <div className="absolute top-[35rem] left-1/2 lg:bottom-[-10rem] translate-x-[-50%] md:bottom-[10rem]">
         {images.map((btn, index) => (
           <button
             onClick={() => {
               handleClick(index);
             }}
             className={`${
-              img === index ? "text-white" : "text-gray-400 opacity-60"
+              img === index ? "text-white" : "text-black opacity-60"
             }`}
           >
             <MdCircle className="h-3" />
           </button>
         ))}
       </div>
-
-      {/* <div className=" text-white flex flex-col items-center justify-center gap-3 ml-[20rem] mt-[5rem] font-display">
-        <h1 className="text-5xl text-center tracking-wider font-thin">
-          Your Cozy Era
-        </h1>
-        <p className="w-[20rem] text-center font-thin tracking-wider text-2xl leading-relaxed">
-          Get peak comfy-chic <br />
-          with new winter essentials.
-        </p>
-        <button className="py-2 px-[6rem] text-black bg-white font-thin">
-          SHOP NOW
-        </button>
-      </div> */}
     </div>
   );
 };

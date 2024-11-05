@@ -12,7 +12,7 @@ const ReviewImages = (props) => {
     return reviewStars;
   };
   return (
-    <div className=" flex container mx-auto justify-center items-center  mb-[3rem] gap-[12rem]">
+    <div className=" flex container mx-auto justify-center items-center gap-[12rem]">
       <div className="flex flex-col gap-7">
         <p className="font-openSans text-xl font-normal mb-4 tracking-wide">
           People Are Talking

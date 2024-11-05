@@ -56,10 +56,10 @@ const EverlaneFavourites = () => {
   ];
   return (
     <div className="mt-6 md:mt-[4rem] lg:mt-[6rem] relative container mx-auto">
-      <h1 className="text-center text-xl font-display font-light  tracking-wide mb-[1rem] uppercase">
+      <h1 className="text-lg md:text-2xl md:mt-[4rem] lg:mt-[6rem] font-thin font-display text-center uppercase">
         Everlane Favorites
       </h1>
-      <p className="text-center hidden md:block mb-[2rem] text-l font-normal font-openSans tracking-wide">
+      <p className="text-center hidden md:block text-l font-normal font-openSans tracking-wide mt-4 mb-[2.5rem]">
         Beautifully Functional. Purposefully Designed. Consciously Crafted.
       </p>
       <div className="md:hidden">
@@ -87,7 +87,7 @@ const EverlaneFavourites = () => {
           ))}
         </Swiper>
       </div>
-      <div className="hidden md:block lg:hidden">
+      <div className="hidden md:block ">
         <Swiper
           slidesPerView={3}
           spaceBetween={20}

@@ -50,8 +50,7 @@ const Review = () => {
   ];
 
   return (
-    <div className="lg:h-screen h-full mt-6 md:mt-[4rem] lg:mt-[6rem] container mx-auto">
-      <p className="text-center font-medium text-xl">Testimonial</p>
+    <div className="mt-6 md:mt-[4rem] lg:mt-[6rem] container mx-auto">
       <div className="md:hidden mt-4">
         <Swiper
           cssMode={true}
@@ -89,7 +88,8 @@ const Review = () => {
           ))}
         </Swiper>
       </div>
-      <hr class="w-[10rem] md:w-max container mx-auto h-px bg-gray-800 border-0 dark:bg-gray-700 mt-[2rem] md:mt-0" />
+      <hr class="w-full container mx-auto h-px bg-gray-800 border-0 dark:bg-gray-700 mt-[6rem]" />
+      {/* <div className="h-[4rem] w-screen bg-slate-800 container"></div> */}
     </div>
   );
 };

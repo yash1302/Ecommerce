@@ -73,7 +73,7 @@ const PhotoGallery = () => {
             Share your latest look with #EverlaneOnYou for a chance to be
             featured.
           </p>
-          <button className="text-sm btn btn-primary border-solid-gray-50  border-2 p-2 rounded-full hover:bg-black hover:text-white font-openSans font-thin tracking-wider mb-4">
+          <button className="text-sm btn btn-primary p-2 rounded-full underline-offset-4 underline font-openSans font-thin tracking-wider mb-4">
             Add Your Photo
           </button>
         </div>
@@ -109,7 +109,7 @@ const PhotoGallery = () => {
             ))}
           </Swiper>
         </div>
-        <div className="hidden lg:block">
+        <div className="hidden lg:block mt-4">
           <Swiper
             slidesPerView={4}
             spaceBetween={20}

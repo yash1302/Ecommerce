@@ -32,7 +32,7 @@ const Article = () => {
     },
   ];
   return (
-    <div className="container mx-auto mt-6">
+    <div className="container mx-auto mt-[6rem]">
       <div className="md:hidden">
         <Swiper
           cssMode={true}
@@ -67,6 +67,7 @@ const Article = () => {
           ))}
         </Swiper>
       </div>
+      <hr class="w-full container mx-auto h-px bg-gray-800 border-0 dark:bg-gray-700 mt-[6rem]" />
       {/* <hr class=" mt-4 container hidden md:block mx-auto h-px bg-gray-800 border-0 dark:bg-gray-700" /> */}
     </div>
   );
