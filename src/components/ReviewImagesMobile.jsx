@@ -11,7 +11,7 @@ const ReviewImagesMobile = (props) => {
     }
     setReviewStars(stars);
   }, [rating]);
-  
+  console.log(first)
   return (
     <div className="flex flex-col ">
       <div className="flex flex-col items-center justify-center gap-2">
